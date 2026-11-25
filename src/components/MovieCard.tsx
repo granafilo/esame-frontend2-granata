@@ -1,13 +1,12 @@
 import type { MovieDetail } from '../types/type';
 import { useNavigate } from 'react-router';
-import { formatDate, formatRating } from '../utils/utils';
+import { formatDate, formatRating, POSTER_PATH } from '../utils/utils';
 
 type props = {
     film: MovieDetail,
     key: number
 }
 
-const POSTER_PATH = 'https://image.tmdb.org/t/p/w500';
 
 function MovieCard({film} : props) {
 

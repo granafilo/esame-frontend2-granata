@@ -1,9 +1,7 @@
 import { Outlet } from "react-router"
 import Header from "./Header"
 
-type Props = {}
-
-const Shell = (props: Props) => {
+const Shell = () => {
   return (
     <div className="shell">
       <Header />

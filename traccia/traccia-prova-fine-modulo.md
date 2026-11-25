@@ -260,22 +260,21 @@ type MovieDetail = {
 ```
 
 > I types per l’**elenco** (search) e per le **props** dei componenti devono essere creati autonomamente dagli studenti.
-
 ---
 
 # Appendice B — Checklist rapida per lo studente
 
-- [ ] Scheda componente Word compilata e caricata su Teams (non nel repo)
-- [ ] Progetto nominato `esame-fe2-{cognome}` a partire dal repo fornito
-- [ ] Consultati traccia e wireframe in `docs`
-- [ ] Types creati (dettaglio fornito + resto autonomo)
-- [ ] Header presente
-- [ ] Una sola Shell condivisa (Header + `Outlet`) per entrambe le pagine
-- [ ] Rotte esatte: `/` e `/movies/:id`
-- [ ] Elenco: URL API fissa, no filtri, no paginazione; coerenza col wireframe
-- [ ] Dettaglio: fetch con `id` da URL; coerenza col wireframe
-- [ ] Una commit per ogni step
-- [ ] Push su GitHub effettuata
+- [x] Scheda componente Word compilata e caricata su Teams (non nel repo) ✅ 2026-11-25
+- [x] Progetto nominato `esame-fe2-{cognome}` a partire dal repo fornito ✅ 2026-11-25
+- [x] Consultati traccia e wireframe in `docs` ✅ 2026-11-25
+- [x] Types creati (dettaglio fornito + resto autonomo) ✅ 2026-11-25
+- [x] Header presente ✅ 2026-11-25
+- [x] Una sola Shell condivisa (Header + `Outlet`) per entrambe le pagine ✅ 2026-11-25
+- [x] Rotte esatte: `/` e `/movies/:id` ✅ 2026-11-25
+- [x] Elenco: URL API fissa, no filtri, no paginazione; coerenza col wireframe ✅ 2026-11-25
+- [x] Dettaglio: fetch con `id` da URL; coerenza col wireframe ✅ 2026-11-25
+- [x] Una commit per ogni step ✅ 2026-11-25
+- [x] Push su GitHub effettuata ✅ 2026-11-25
 
 ---
 
