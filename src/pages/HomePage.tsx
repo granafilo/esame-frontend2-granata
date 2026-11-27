@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
-import type { MovieDetail } from '../../types/type';
-import { getMovieList } from '../../api/apiUtils';
-import MovieCard from '../MovieCard';
+import type { MovieDetailSummary, MovieResponse } from '../types/type';
+import { getMovieList } from '../api/apiUtils';
+import MovieCard from '../components/MovieCard'
 
 function HomePage() {
-  const [movieList, setMovieList] = useState<MovieDetail[]>([])
+  const [movieList, setMovieList] = useState<MovieDetailSummary[]>([])
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
 
   const initializeMovies = async () => {
     try {
-      const data = await getMovieList()
-      setMovieList(data)
+      const data: MovieResponse = await getMovieList()
+      setMovieList(data.results)
       setIsLoading(false)
       setError(false)
     } catch (err) {
@@ -22,9 +22,10 @@ function HomePage() {
   }
 
   useEffect(() => {
-    document.title = "Wirefram - Elenco movies";
     initializeMovies();
   }, [])
+
+  document.title = "Wireframe - Elenco movies";
 
   return (
     <main className='main'>
@@ -34,16 +35,9 @@ function HomePage() {
           items · senza filtri / paginazione
         </p>
 
-        {
-          !error ? 
-            (!isLoading ? 
-              ( <div className="movie-grid"> {movieList.map((movie) => (<MovieCard film={movie} key={movie.id}/>) ) } </div>): 
-              (<><div>Caricamento in corso... </div> <br/> <div>Attendere</div></>)):
-          (<><div style={{color: "red"}}>Si è verificato un errore</div><br/><div>Riprovare più tardi</div></>)
-        }
-
-        {
-        }
+        { !!error ? <><div style={{color: "red"}}>Si è verificato un errore</div><br/><div>Riprovare più tardi</div></> : <></>}
+        { !!isLoading ? <><div>Caricamento in corso... </div> <br/> <div>Attendere</div></> : <></>}
+        { !!movieList ? <div className="movie-grid"> {movieList.map((movie) => (<MovieCard film={movie} key={movie.id}/>) ) } </div> : <></>}
 
         <p className="note">
           Wireframe statico. Solo la CTA Dettaglio del primo risultato naviga

@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Shell from './components/Shell.tsx'
-import HomePage from './components/pages/HomePage.tsx'
-import MovieDetailsPage from './components/pages/MovieDetailsPage.tsx'
+import HomePage from './pages/HomePage.tsx'
+import MovieDetailsPage from './pages/MovieDetailsPage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

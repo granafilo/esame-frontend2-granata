@@ -1,16 +1,14 @@
-import type { MovieDetail } from '../types/type';
+import type { MovieDetailSummary } from '../types/type';
 import { useNavigate } from 'react-router';
 import { formatDate, formatRating, POSTER_PATH } from '../utils/utils';
 
 type props = {
-    film: MovieDetail,
+    film: MovieDetailSummary,
     key: number
 }
 
 
 function MovieCard({film} : props) {
-
-
     const navigate = useNavigate();
 
     const navigateToFilmDetail = () => {
